@@ -1,14 +1,13 @@
-const int mouseLeftButton = 3;
-const int mouseRightButton =4;
+#include "Mouse.h"
+
+const int mouseLeftButton = 12;
+const int mouseRightButton =11;
 
 int responseDelay = 10;     // response delay of the mouse, in ms
 
 void setup() {
-  pinMode(mouseLeftButton, INPUT);
-  pinMode(mouseRightButton, INPUT);
-
-  digitalWrite(mouseLeftButton, HIGH);
-  digitalWrite(mouseRightButton, HIGH);
+  pinMode(mouseLeftButton, INPUT_PULLUP);
+  pinMode(mouseRightButton, INPUT_PULLUP);
 
   Mouse.begin();
 }
